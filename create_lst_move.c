@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   create_lst_move.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkerkeni <mkerkeni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 21:35:19 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/25 21:40:08 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/26 12:26:25 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_lstadd_back_move(t_move **lst, t_move *new)
 	t_move	*tmp;
 
 	if (*lst == NULL)
-	{
+	{	
 		*lst = new;
 		return ;
 	}
@@ -46,7 +46,7 @@ void	print_list_move(t_move *list_move)
 	tmp = list_move;
 	while (tmp != NULL)
 	{
-		ft_printf("%d\n", tmp->move);
+		ft_printf("%s", tmp->move);
 		tmp = tmp->next;
-	}
+	}	
 }
