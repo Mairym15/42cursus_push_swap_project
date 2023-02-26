@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:09:20 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/26 12:28:43 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:03:15 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void	put_up_value_b(t_lst *lst, int val_b)
 	else
 	{
 		while (lst->b->index != val_b)
-			reverse_rotate_b(lst);
+			reverse_rotate_b(lst, 0);
 	}
 }
 
@@ -41,7 +41,7 @@ static void	put_up_value_a(t_lst *lst, int val_a, int bool)
 	else
 	{
 		while (lst->a->index != val_a)
-			reverse_rotate_a(lst);
+			reverse_rotate_a(lst, 0);
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 09:19:09 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/26 13:28:22 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:05:12 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static void	put_back_in_place_list(t_lst *lst, int bool)
 	else
 	{
 		while (lst->a->index != 0)
-			reverse_rotate_a(lst);
+			reverse_rotate_a(lst, 0);
 	}
 }
 
@@ -71,11 +71,11 @@ static void	fill_b(t_lst *lst, t_var v)
 	while (lst->a->next->next->next != NULL && lst->a->index != v.max_a
 		&& lst->a->index != v.sec_max_a && lst->a->index != v.thir_max_a)
 	{
-		/*if (lst->b != NULL)
+		if (lst->b != NULL)
 		{
 			if (lst->b->index > (ft_lst_size(lst->b) / 2))
 				rotate_b(lst);
-		}*/
+		}
 		push_b(lst);
 		if (lst->a->next->next->next != NULL && (lst->a->index == v.max_a
 				|| lst->a->index == v.sec_max_a

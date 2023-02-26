@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 10:28:46 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/26 13:28:01 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:04:06 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	sort_with_three(t_lst *lst)
 		middle = (lst->a->next);
 		if (check_if_sorted(lst->a) == 1 && (middle->index > last->index
 				|| last->index < lst->a->index) && last->index > lst->a->index)
-			reverse_rotate_a(lst);
+			reverse_rotate_a(lst, 0);
 		else if (check_if_sorted(lst->a) == 1 && lst->a->index > last->index)
 			rotate_a(lst);
 		else if (check_if_sorted(lst->a) == 1 && lst->a->index > middle->index)
@@ -61,7 +61,7 @@ static void	add_number_and_sort(t_lst *lst)
 			&& lst->a->index > lst->a->next->index)
 			swap_a(lst);
 		else if (check_if_sorted(lst->a) == 1 && middle->index > last->index)
-			reverse_rotate_a(lst);
+			reverse_rotate_a(lst, 0);
 		else
 		{
 			while (lst->a->index < lst->a->next->index)
@@ -83,7 +83,7 @@ void	sort_with_five(t_lst *lst)
 			rotate_a(lst);
 		while (check_if_sorted(lst->a) == 1
 			&& (ft_lst_last(lst->a)->index < lst->a->index))
-			reverse_rotate_a(lst);
+			reverse_rotate_a(lst, 0);
 		push_b(lst);
 	}
 	sort_with_three(lst);
@@ -103,8 +103,6 @@ void	push_swap(t_pile *nb_to_sort, int size)
 	lst.a = nb_to_sort;
 	lst.b = NULL;
 	lst.move_list = NULL;
-	//ft_printf("list a:\n");
-	//print_list(nb_to_sort, 2);
 	if (lst.a->next == NULL)
 		return ;
 	if (check_if_sorted(lst.a) == 1)

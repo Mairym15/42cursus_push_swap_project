@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 10:29:06 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/26 12:42:13 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:02:46 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,8 @@ void		rotate_a(t_lst *lst);
 void		rotate_b(t_lst *lst);
 void		rotate_a_and_b(t_lst *lst);
 
-void		reverse_rotate_a(t_lst *lst);
-void		reverse_rotate_b(t_lst *lst);
+void		reverse_rotate_a(t_lst *lst, int bool);
+void		reverse_rotate_b(t_lst *lst, int bool);
 void		reverse_rotate_a_and_b(t_lst *lst);
 
 t_pile		*ft_lst_new(int nb);
