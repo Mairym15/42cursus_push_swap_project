@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 21:35:19 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/26 12:26:25 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:15:17 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,21 @@ void	print_list_move(t_move *list_move)
 		ft_printf("%s", tmp->move);
 		tmp = tmp->next;
 	}	
+}
+
+int	ft_lstsize_move(t_move *list_move)
+{
+	int		i;
+	t_move	*tmp;
+
+	tmp = list_move;
+	if (tmp == NULL)
+		return (0);
+	i = 0;
+	while (tmp->next != NULL)
+	{
+		i++;
+		tmp = tmp->next;
+	}
+	return (i + 1);
 }

@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 09:19:09 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/26 14:05:12 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/27 11:54:42 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void	sort_list(t_lst *lst, t_var v, int move)
 
 	while ((lst->b) != NULL)
 	{
+		if (lst->a->index > lst->a->next->index && lst->b->index > lst->b->next->index)
+			swap_a_and_b(lst);
 		v.closest_a = get_closest_nb(lst->a, lst->b->index, v.max_a);
 		move = get_total_move(lst->a, lst->b, lst->b->index, v.closest_a);
 		v.best_b = lst->b->index;
@@ -98,9 +100,6 @@ void	sort_big_lists(t_lst *lst)
 	v.max_a = get_max(&(lst->a));
 	v.sec_max_a = get_second_max(&(lst->a));
 	v.thir_max_a = get_third_max(&(lst->a));
-	//ft_printf("max a: %d\n", v.max_a);
-	//ft_printf("second max a: %d\n", v.sec_max_a);
-	//ft_printf("third max a: %d\n", v.thir_max_a);
 	move = 0;
 	while (lst->a->index == v.max_a || lst->a->index == v.sec_max_a
 		|| lst->a->index == v.thir_max_a)

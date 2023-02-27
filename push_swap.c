@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 10:28:46 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/26 14:04:06 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/27 11:59:01 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,10 +113,21 @@ void	push_swap(t_pile *nb_to_sort, int size)
 			sort_with_three(&lst);
 		else if (size == 5)
 			sort_with_five(&lst);
-		else
+		/*else if (size == 500)
 		{
 			sort_big_lists(&lst);
-		}	
+			while (ft_lstsize_move(lst.move_list) > 5500)
+			{
+				lst.move_list = NULL;
+				free_list(lst.a);
+				free_list(lst.b);
+				lst.a = nb_to_sort;
+				rotate_a(&lst);
+				sort_big_lists(&lst);
+			}
+		}*/
+		else
+			sort_big_lists(&lst);
 	}
 	print_list_move(lst.move_list);
 	free_list(lst.b);

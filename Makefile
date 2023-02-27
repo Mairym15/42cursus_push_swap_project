@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mkerkeni <mkerkeni@student.42.fr>          +#+  +:+       +#+         #
+#    By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/26 10:15:55 by mkerkeni          #+#    #+#              #
-#    Updated: 2023/02/25 22:06:31 by mkerkeni         ###   ########.fr        #
+#    Updated: 2023/02/26 14:27:00 by mkerkeni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = push_swap
 LIBFT = Libft/
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-CHECKER = checker
+#CHECKER = checker
 
 SRCS = push_swap.c ft_push.c ft_reverse_rotate.c ft_rotate.c ft_swap.c \
  list_functions.c main.c parse_check.c push_swap_utils.c sort_big_lists.c \
@@ -28,15 +28,15 @@ OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 all: $(NAME)
 
-bonus: $(CHECKER)
+#bonus: $(CHECKER)
 
 $(NAME): $(OBJS)
 	$(MAKE) -C $(LIBFT)
 	$(CC) $(CFLAGS) -o $(NAME) $^ $(LIBFT)libft.a
 
-$(BONUS): $(OBJS_BONUS) $(OBJS)
-	$(MAKE) -C $(LIBFT)
-	$(CC) $(CFLAGS) -o $(CHECKER) $^ $(LIBFT)libft.a
+#$(BONUS): $(OBJS_BONUS) $(OBJS)
+#	$(MAKE) -C $(LIBFT)
+#	$(CC) $(CFLAGS) -o $(CHECKER) $^ $(LIBFT)libft.a
 
 clean:
 	rm -f $(OBJS)

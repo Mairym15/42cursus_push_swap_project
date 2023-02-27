@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 10:29:06 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/26 14:02:46 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:15:34 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ void		print_list(t_pile *nb_to_sort, int bool);
 void		print_list_move(t_move *list_move);
 void		ft_lstadd_back_move(t_move **lst, t_move *new);
 t_move		*ft_lstnew_move(char *move);
+int			ft_lstsize_move(t_move *list_move);
 
 long int	ft_atol(const char *str);
 void		ft_swap(int *a, int *b);

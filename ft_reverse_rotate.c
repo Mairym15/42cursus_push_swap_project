@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 23:04:01 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/26 14:02:40 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:11:14 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ void	reverse_rotate_b(t_lst *lst, int bool)
 		next = ft_lstnew_move("rrb\n");
 		ft_lstadd_back_move(&(lst->move_list), next);
 	}
-	
 }
 
 void	reverse_rotate_a_and_b(t_lst *lst)

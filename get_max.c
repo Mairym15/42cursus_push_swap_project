@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 11:26:13 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/26 12:51:57 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/27 11:44:18 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,12 @@ int	get_third_max(t_pile **lst)
 	max = get_max(lst);
 	sec_max = get_second_max(lst);
 	if (tmp->index == max || tmp->index == sec_max)
-		thir_max = tmp->next->index;
+	{
+		if (tmp->next->index == max || tmp->next->index == sec_max)
+			thir_max = tmp->next->next->index;
+		else
+			thir_max = tmp->next->index;
+	}
 	else
 		thir_max = tmp->index;
 	while (tmp->next != NULL)
