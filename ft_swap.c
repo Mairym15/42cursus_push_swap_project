@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 22:57:27 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/26 12:26:46 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/27 14:36:13 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	swap_a(t_lst *lst)
 	t_pile	*tmp;
 	t_move	*next;
 
+	if (lst->a->next == NULL)
+		ft_printf("liste pas vide\n");
 	if (lst->a != NULL && lst->a->next != NULL)
 	{
 		tmp = lst->a;
