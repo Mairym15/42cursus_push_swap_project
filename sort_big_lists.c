@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 09:19:09 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/27 13:56:10 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/28 16:29:16 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ void	sort_list(t_lst *lst, t_var v, int move)
 
 	while ((lst->b) != NULL)
 	{
-		if (lst->a->index > lst->a->next->index && lst->b->index > lst->b->next->index)
-			swap_a_and_b(lst);
 		v.closest_a = get_closest_nb(lst->a, lst->b->index, v.max_a);
 		move = get_total_move(lst->a, lst->b, lst->b->index, v.closest_a);
 		v.best_b = lst->b->index;
@@ -109,7 +107,7 @@ void	sort_big_lists(t_lst *lst)
 		sort_with_three(lst);
 	sort_list(lst, v, move);
 	middle = get_middle(lst->a);
-	if (check_position(lst->a, 0, middle) == 1)
+	if (check_position(lst->a, 0) == 1)
 		put_back_in_place_list(lst, 1);
 	else
 		put_back_in_place_list(lst, 0);

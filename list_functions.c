@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   list_functions.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkerkeni <mkerkeni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 22:37:29 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/25 21:34:18 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/28 11:02:35 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "checker.h"
 
 t_pile	*ft_lst_new(int nb)
 {

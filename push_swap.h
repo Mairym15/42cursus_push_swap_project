@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 10:29:06 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/26 14:15:34 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/28 16:17:47 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int			get_second_max(t_pile **lst);
 int			get_third_max(t_pile **lst);
 
 t_pile		*get_middle(t_pile	*lst);
-int			check_position(t_pile *lst, int value, t_pile	*middle);
+int			check_position(t_pile *lst, int value);
 int			get_number_of_move(t_pile *lst, int value);
 
 void		match_best_values(t_lst *lst, int val_a, int val_b);

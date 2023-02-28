@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 11:45:07 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/26 11:36:09 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/28 16:19:08 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,13 @@ t_pile	*get_middle(t_pile	*lst)
 	return (middle);
 }
 
-int	check_position(t_pile *lst, int value, t_pile	*middle)
+int	check_position(t_pile *lst, int value)
 {
 	t_pile	*tmp;
+	t_pile	*middle;
 
 	tmp = lst;
+	middle = get_middle(lst);
 	if (tmp->index == value)
 		return (1);
 	while (tmp->index != value && tmp != middle)
@@ -82,7 +84,7 @@ int	get_number_of_move(t_pile *lst, int value)
 	tmp = lst;
 	move = 0;
 	middle = get_middle(lst);
-	if (check_position(tmp, value, middle) == 1)
+	if (check_position(tmp, value) == 1)
 	{
 		if (tmp->index == value)
 			return (0);

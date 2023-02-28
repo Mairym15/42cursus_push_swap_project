@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:09:20 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/26 14:03:15 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/28 16:19:30 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	put_up_value_b(t_lst *lst, int val_b)
 	middle_b = get_middle(lst->b);
 	if (lst->b->index == val_b)
 		return ;
-	if (check_position(lst->b, val_b, middle_b) == 1)
+	if (check_position(lst->b, val_b) == 1)
 	{
 		while (lst->b->index != val_b)
 			rotate_b(lst);
@@ -63,14 +63,9 @@ int	get_closest_nb(t_pile *lst, int value, int max)
 
 void	match_best_values(t_lst *lst, int val_a, int val_b)
 {
-	t_pile	*middle_a;
-	t_pile	*middle_b;
-
-	middle_a = get_middle(lst->a);
-	middle_b = get_middle(lst->b);
-	if (check_position(lst->a, val_a, middle_a) == 1)
+	if (check_position(lst->a, val_a) == 1)
 	{
-		if (check_position(lst->b, val_b, middle_b) == 1
+		if (check_position(lst->b, val_b) == 1
 			&& lst->b->index != val_b)
 		{
 			while (lst->a->index != val_a && lst->b->index != val_b)
@@ -80,7 +75,7 @@ void	match_best_values(t_lst *lst, int val_a, int val_b)
 	}
 	else
 	{
-		if (check_position(lst->b, val_b, middle_b) == 0)
+		if (check_position(lst->b, val_b) == 0)
 		{
 			while (lst->a->index != val_a && lst->b->index != val_b)
 				reverse_rotate_a_and_b(lst);
