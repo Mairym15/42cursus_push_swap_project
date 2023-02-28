@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_big_lists_3.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mkerkeni <mkerkeni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:09:20 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/28 16:19:30 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/28 21:43:38 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 static void	put_up_value_b(t_lst *lst, int val_b)
 {
-	t_pile	*middle_b;
-
-	middle_b = get_middle(lst->b);
 	if (lst->b->index == val_b)
 		return ;
 	if (check_position(lst->b, val_b) == 1)

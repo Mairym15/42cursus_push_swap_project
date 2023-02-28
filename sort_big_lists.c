@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_big_lists.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mkerkeni <mkerkeni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 09:19:09 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/28 16:29:16 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/28 21:43:14 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,8 +93,7 @@ void	sort_big_lists(t_lst *lst)
 {
 	t_var	v;
 	int		move;
-	t_pile	*middle;
-
+	
 	v.max_a = get_max(&(lst->a));
 	v.sec_max_a = get_second_max(&(lst->a));
 	v.thir_max_a = get_third_max(&(lst->a));
@@ -106,7 +105,6 @@ void	sort_big_lists(t_lst *lst)
 	if (check_if_sorted(lst->a) == 1)
 		sort_with_three(lst);
 	sort_list(lst, v, move);
-	middle = get_middle(lst->a);
 	if (check_position(lst->a, 0) == 1)
 		put_back_in_place_list(lst, 1);
 	else

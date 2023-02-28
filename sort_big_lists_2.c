@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_big_lists_2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mkerkeni <mkerkeni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 11:45:07 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/28 16:19:08 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/02/28 21:46:07 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,9 @@ int	get_number_of_move(t_pile *lst, int value)
 {
 	int		move;
 	t_pile	*tmp;
-	t_pile	*middle;
 
 	tmp = lst;
 	move = 0;
-	middle = get_middle(lst);
 	if (check_position(tmp, value) == 1)
 	{
 		if (tmp->index == value)

@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: mkerkeni <mkerkeni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/26 10:15:55 by mkerkeni          #+#    #+#              #
-#    Updated: 2023/02/28 11:30:34 by mkerkeni         ###   ########.fr        #
+#    Updated: 2023/02/28 21:46:35 by mkerkeni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 LIBFT = Libft/
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3
+CFLAGS = -Wall -Wextra 
 CHECKER_NAME = checker
 CHECKER_FOLDER = checker/
 
