@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 21:35:19 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/26 14:15:17 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/03/01 10:50:12 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,16 @@ int	ft_lstsize_move(t_move *list_move)
 		tmp = tmp->next;
 	}
 	return (i + 1);
+}
+
+void	free_list_move(t_move *lst)
+{
+	t_move	*tmp;
+
+	while (lst != NULL)
+	{
+		tmp = lst;
+		lst = lst->next;
+		free(tmp);
+	}
 }

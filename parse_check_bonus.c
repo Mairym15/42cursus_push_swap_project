@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 22:47:07 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/27 16:46:41 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/03/01 09:55:25 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,10 @@ t_pile	*parse_check_bonus(int ac, char **av)
 	{
 		if (check_if_nb(av[i]) == 0 || ft_atol(av[i]) < INT_MIN
 			|| ft_atol(av[i]) > INT_MAX)
+		{
+			free_list(nb_to_sort);
 			return (display_error());
+		}
 		nb_to_sort = get_list(nb_to_sort, av[i]);
 		i++;
 	}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkerkeni <mkerkeni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 14:20:38 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/28 21:57:15 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/03/01 10:17:09 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,14 +80,20 @@ static int	check_instruction(t_pile *a)
 		if (read_instructions(&a, &b, line) == 0)
 		{
 			ft_printf("Error\n");
+			free(line);
+			line = NULL;
 			return (0);
 		}
+		free(line);
 		line = get_next_line(0);
 	}
+	free(line);
+	line = NULL;
 	if (check_if_sorted_bonus(a) == 0)
 		ft_printf("OK\n");
 	else
 		ft_printf("KO\n");
+	free_list_bonus(b);
 	return (1);
 }
 
@@ -99,9 +105,16 @@ int	main(int ac, char **av)
 		return (EXIT_SUCCESS);
 	nb_to_sort = parse_check_bonus(ac, av);
 	if (nb_to_sort == NULL)
+	{
+		free_list_bonus(nb_to_sort);
 		return (EXIT_FAILURE);
+	}
 	if (check_instruction(nb_to_sort) == 0)
+	{
+		free_list_bonus(nb_to_sort);
 		return (EXIT_FAILURE);
+	}
 	free_list_bonus(nb_to_sort);
+	system("leaks checker");
 	return (EXIT_SUCCESS);
 }

@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 10:29:06 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/28 16:17:47 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/03/01 10:37:12 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ void		sort_with_three(t_lst *lst);
 void		sort_big_lists(t_lst *lst);
 void		sort_list(t_lst *lst, t_var v, int move);
 
+void		sort_medium_lists(t_lst *lst);
+
 int			get_max(t_pile **lst);
 int			get_second_max(t_pile **lst);
 int			get_third_max(t_pile **lst);
@@ -94,6 +96,7 @@ void		print_list_move(t_move *list_move);
 void		ft_lstadd_back_move(t_move **lst, t_move *new);
 t_move		*ft_lstnew_move(char *move);
 int			ft_lstsize_move(t_move *list_move);
+void		free_list_move(t_move *lst);
 
 long int	ft_atol(const char *str);
 void		ft_swap(int *a, int *b);

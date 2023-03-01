@@ -6,7 +6,7 @@
 /*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 10:28:46 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/28 16:23:44 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/03/01 10:45:29 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,10 +113,13 @@ void	push_swap(t_pile *nb_to_sort, int size)
 			sort_with_three(&lst);
 		else if (size >= 4 && size <= 6)
 			sort_with_five(&lst);
-		else
+		else if (size == 100 || size == 500)
 			sort_big_lists(&lst);
+		else
+			sort_medium_lists(&lst);
 	}
 	print_list_move(lst.move_list);
 	free_list(lst.b);
 	free_list(lst.a);
+	free_list_move(lst.move_list);
 }

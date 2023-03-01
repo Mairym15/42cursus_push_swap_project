@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_big_lists.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkerkeni <mkerkeni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 09:19:09 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/02/28 21:43:14 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/03/01 09:28:15 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ void	sort_big_lists(t_lst *lst)
 {
 	t_var	v;
 	int		move;
-	
+
 	v.max_a = get_max(&(lst->a));
 	v.sec_max_a = get_second_max(&(lst->a));
 	v.thir_max_a = get_third_max(&(lst->a));
