@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkerkeni <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mkerkeni <mkerkeni@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 10:28:46 by mkerkeni          #+#    #+#             */
-/*   Updated: 2023/03/01 10:45:29 by mkerkeni         ###   ########.fr       */
+/*   Updated: 2023/04/09 09:33:21 by mkerkeni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,40 +46,11 @@ void	sort_with_three(t_lst *lst)
 	}
 }
 
-static void	add_number_and_sort(t_lst *lst)
-{
-	t_pile	*last;
-	t_pile	*middle;
-
-	while (check_if_sorted(lst->a) == 1)
-	{
-		last = ft_lst_last(lst->a);
-		middle = (lst->a->next);
-		if (check_if_sorted(lst->a) == 1 && lst->a->index > last->index)
-			rotate_a(lst);
-		else if (check_if_sorted(lst->a) == 1
-			&& lst->a->index > lst->a->next->index)
-			swap_a(lst);
-		else if (check_if_sorted(lst->a) == 1 && middle->index > last->index)
-			reverse_rotate_a(lst, 0);
-		else
-		{
-			while (lst->a->index < lst->a->next->index)
-				push_b(lst);
-			if (check_if_sorted(lst->a) == 1
-				&& lst->a->index > lst->a->next->index)
-				swap_a(lst);
-			while (ft_lst_size(lst->b) > 0)
-				push_a(lst);
-		}
-	}
-}
-
 void	sort_with_five(t_lst *lst)
 {	
 	while (ft_lst_size(lst->a) > 3)
 	{
-		while (check_if_sorted(lst->a) == 1 && lst->a->index >= 3)
+		while (check_if_sorted(lst->a) == 1 && lst->a->index > 1)
 			rotate_a(lst);
 		while (check_if_sorted(lst->a) == 1
 			&& (ft_lst_last(lst->a)->index < lst->a->index))
@@ -92,7 +63,7 @@ void	sort_with_five(t_lst *lst)
 		if (lst->b->next != NULL && lst->b->index < lst->b->next->index)
 			swap_b(lst);
 		push_a(lst);
-		add_number_and_sort(lst);
+		push_a(lst);
 	}
 }
 
