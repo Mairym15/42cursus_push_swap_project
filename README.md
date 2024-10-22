@@ -3,16 +3,19 @@
 ## Project Overview 📋
 
 **push_swap** is a sorting algorithm challenge where the goal is to sort a stack of integers (`stack a`) using a specific set of operations. 
-The objective is to generate the shortest possible sequence of instructions that sorts the stack in ascending order, with the smallest number on top.
+The objective is to generate the **shortest possible sequence of instructions** that sorts the stack in ascending order, with the smallest number on top.
 
 Performance is measured by the number of operations used, and a lower number of operations results in a higher score.
 
 ## How To Use 🔧
 
 1. Compile the program with `Make`
-2. Run the program with `./push_swap [list_of_integers]`
-3. Optional: use the checker to validate that the sorting works properly: `./push_swap [list_of_integers] | ./checker [list_of_integers]`
-
+2. Run the program with:
+3. ```
+   ./push_swap [list_of_integers]
+4. Optional: use the checker to validate that the sorting works properly:
+5. ```
+   ./push_swap [list_of_integers] | ./checker [list_of_integers]
 ## Technologies Used ⚙️
 
 <img src="https://cdn.worldvectorlogo.com/logos/c-1.svg" alt="C" width="40" height="40"/>
@@ -28,5 +31,5 @@ Some of the toughest challenges in this project included:
 
 ## What I Learned 🚀
 
-Through this project, I enhanced my understanding of sorting algorithms, data structures, and the importance of efficiency. 
-I also had the opportunity to apply my get_next_line function while coding the checker, which helped reinforce my skills in memory management and input handling.
+Through this project, I enhanced my understanding of **sorting algorithms** 📊, **data structures**, and the importance of **efficiency** ⚡. 
+I also had the opportunity to apply my get_next_line function while coding the checker, which helped reinforce my skills in **memory management** and **input handling**.
