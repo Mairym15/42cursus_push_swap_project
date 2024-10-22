@@ -7,6 +7,12 @@ The objective is to generate the shortest possible sequence of instructions that
 
 Performance is measured by the number of operations used, and a lower number of operations results in a higher score.
 
+## How To Use 🔧
+
+1. Compile the program with `Make`
+2. Run the program with `./push_swap [list_of_integers]`
+3. Optional: use the checker to validate that the sorting works properly: `./push_swap [list_of_integers] | ./checker [list_of_integers]`
+
 ## Technologies Used ⚙️
 
 <img src="https://cdn.worldvectorlogo.com/logos/c-1.svg" alt="C" width="40" height="40"/>
