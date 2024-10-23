@@ -14,7 +14,7 @@ Performance is measured by the number of operations used, and a lower number of 
 3. ```
    ./push_swap [list_of_integers]
 4. Optional: use the checker to validate that the sorting works properly:
-5. ```
+   ```
    ./push_swap [list_of_integers] | ./checker [list_of_integers]
 ## Technologies Used ⚙️
 
